@@ -48,6 +48,7 @@ const state = {
   transVisible: false,
   quizSelected: null,
   quizAnswered: false,
+  quizTransVisible: false,
   completedStages: savedProgress.completedStages || {}
 };
 
@@ -71,6 +72,7 @@ function switchSet(setId) {
   state.transVisible = false;
   state.quizSelected = null;
   state.quizAnswered = false;
+  state.quizTransVisible = false;
   speechSynthesis.cancel();
   state.fpPlaying = false;
   state.fpAbort = true;
@@ -204,7 +206,8 @@ function toggleTrans() { state.transVisible = !state.transVisible; render(); }
 // ============================================================
 function selectQuiz(i) { state.quizSelected = i; render(); }
 function submitQuiz() { state.quizAnswered = true; render(); }
-function resetQuiz() { state.quizSelected = null; state.quizAnswered = false; }
+function resetQuiz() { state.quizSelected = null; state.quizAnswered = false; state.quizTransVisible = false; }
+function toggleQuizTrans() { state.quizTransVisible = !state.quizTransVisible; render(); }
 
 // ============================================================
 // UI 컴포넌트
@@ -519,7 +522,7 @@ function chunkScreen() {
         <div class="meta-line">DIRECT READING</div>
         <div style="font-family: var(--font-serif); font-size: 17px; font-weight: 500; margin: 12px 0;">${c.en}</div>
         <div style="height: 1px; background: var(--color-border-tertiary); margin: 12px auto; max-width: 60px;"></div>
-        <div style="font-size: 14px; color: var(--color-text-secondary);">${c.ko}</div>
+        <div style="font-size: 14px; color: var(--color-text-secondary); line-height: 1.7;">${c.ko}</div>
       ` : ''}
       ${state.mode === 'structure' ? `
         <div class="meta-line">SENTENCE STRUCTURE</div>
@@ -669,6 +672,25 @@ function quizScreen() {
         </div>
       </div>
 
+      <div class="screen-card" style="padding: 0; overflow: hidden;">
+        <button onclick="toggleQuizTrans()" style="width: 100%; background: ${state.quizTransVisible ? 'var(--color-background-warning)' : 'var(--color-background-secondary)'}; border: none; padding: 14px 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="ti ti-language" style="font-size: 16px; color: ${state.quizTransVisible ? 'var(--color-text-warning)' : 'var(--color-text-secondary)'};" aria-hidden="true"></i>
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 11px; color: ${state.quizTransVisible ? 'var(--color-text-warning)' : 'var(--color-text-tertiary)'}; letter-spacing: 0.1em;">PASSAGE TRANSLATION</div>
+              <div style="font-size: 13px; font-weight: 500; color: ${state.quizTransVisible ? 'var(--color-text-warning)' : 'var(--color-text-primary)'}; margin-top: 2px;">전체 우리말 해석 ${state.quizTransVisible ? '숨기기' : '확인'}</div>
+            </div>
+          </div>
+          <i class="ti ti-chevron-${state.quizTransVisible ? 'up' : 'down'}" style="font-size: 16px; color: ${state.quizTransVisible ? 'var(--color-text-warning)' : 'var(--color-text-secondary)'};" aria-hidden="true"></i>
+        </button>
+        ${state.quizTransVisible ? `
+          <div style="padding: 14px 16px; background: var(--color-background-warning); border-top: 0.5px solid rgba(0,0,0,0.06);">
+            <div style="font-size: 13px; line-height: 1.95; color: var(--color-text-warning);">${s.passageKorean || '(해석 준비 중)'}</div>
+            <div style="margin-top: 10px; padding-top: 8px; border-top: 0.5px solid rgba(0,0,0,0.08); font-size: 11px; color: var(--color-text-warning); opacity: 0.7;">노란 부분이 학습한 핵심 문장의 해석</div>
+          </div>
+        ` : ''}
+      </div>
+
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1.25rem;">
         <button class="ghost-btn" onclick="resetQuiz(); nav('chunk')" style="padding: 10px; justify-content: center;">
           <i class="ti ti-refresh" aria-hidden="true"></i>청크 학습 다시
@@ -715,6 +737,7 @@ window.toggleTrans = toggleTrans;
 window.selectQuiz = selectQuiz;
 window.submitQuiz = submitQuiz;
 window.resetQuiz = resetQuiz;
+window.toggleQuizTrans = toggleQuizTrans;
 
 // 초기 렌더
 render();

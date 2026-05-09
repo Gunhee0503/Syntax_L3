@@ -23,6 +23,7 @@ window.SETS = {
     koreanFull: '생존이 집단의 노력에 달려 있다는 그 인식이 우리 조상들의 인지 구조를 점진적으로 변형시켰는데, 이는 타인의 의도를 예측할 수 있는 사람들을 진화적으로 선호하게 만들었다.',
     passage: "For most of human prehistory, individual survival was simply impossible. Hunting large prey, defending against predators, and raising offspring all required coordinated action among many hands. <span class='ch-hl'>The recognition that survival depended on collective effort gradually transformed our ancestors' cognitive architecture, favoring those who could anticipate the intentions of others.</span> Over time, this selective pressure produced brains exquisitely tuned to read facial expressions, infer goals, and predict behavior. What began as a survival necessity, in other words, eventually became the foundation of human social intelligence itself.",
     passageWordCount: 86,
+    passageKorean: "인류 선사 시대 대부분 동안, 개인이 혼자 생존하는 것은 사실상 불가능했다. 큰 사냥감을 잡는 일, 포식자로부터 자신을 지키는 일, 자손을 기르는 일 모두가 수많은 손이 함께하는 조율된 행동을 필요로 했다. <span class='ch-hl'>생존이 집단의 노력에 달려 있다는 그 인식이 우리 조상들의 인지 구조를 점진적으로 변형시켰는데, 이는 타인의 의도를 예측할 수 있는 사람들을 진화적으로 선호하게 만들었다.</span> 시간이 흐르면서, 이러한 선택적 압력은 표정을 읽고, 의도를 추론하고, 행동을 예측하는 데 정교하게 조율된 뇌를 만들어냈다. 다시 말해, 처음에는 생존의 필요로 시작된 것이 결국 인간 사회적 지능 그 자체의 토대가 된 것이다.",
     structure: `<div><span class="ch-hl">The recognition</span> <span style="color: #185FA5;">[that survival depended on collective effort]</span></div>
       <div style="padding-left: 12px;"><em style="color: var(--color-text-tertiary);">gradually transformed</em> <span style="border-bottom: 2px solid #0F6E56;">our ancestors' cognitive architecture</span>,</div>
       <div style="padding-left: 24px;"><span style="border-bottom: 2px dashed #993556;">favoring those</span> <span style="color: #993556;">[who could anticipate the intentions of others]</span>.</div>`,
@@ -65,10 +66,16 @@ window.SETS = {
     koreanFull: '이 관점에서 언어는 현실을 비추는 투명한 창이라기보다는, 오히려 우리가 보는 것을 조용히 굴절시키는 렌즈에 가깝다.',
     passage: "For decades, scientists assumed that human perception was largely universal — that we all carved up reality into the same basic categories. Recent research, however, suggests something far more unsettling. The vocabulary a culture develops for colors, time, or spatial relations appears to subtly reshape how its members notice, remember, and reason about the world. Speakers of languages that mark time with rich grammatical tense, for instance, recall the order of past events more accurately than speakers of languages that do not. <span class='ch-hl'>Language, in this view, is less a transparent window onto reality than a lens that quietly bends what we see.</span>",
     passageWordCount: 92,
-    structure: `<div><span class="ch-hl">Language</span>, <span style="color: #993556;">in this view,</span> <em style="color: var(--color-text-tertiary);">is</em></div>
-      <div style="padding-left: 16px;"><span style="background: #EFF6FC; color: #143C6B; padding: 2px 6px; border-radius: 3px;">less a transparent window onto reality</span></div>
+    passageKorean: "수십 년 동안 과학자들은 인간의 지각이 대체로 보편적이라고 — 즉, 우리가 모두 현실을 동일한 기본 범주로 나눈다고 — 가정해 왔다. 그러나 최근의 연구는 훨씬 더 불안한 무언가를 시사한다. 한 문화가 색깔, 시간, 또는 공간 관계에 대해 발달시킨 어휘는, 그 구성원들이 세계를 인식하고 기억하고 추론하는 방식을 미묘하게 재형성하는 것처럼 보인다. 예를 들어, 풍부한 문법적 시제로 시간을 표시하는 언어의 화자들은 그렇지 않은 언어의 화자들보다 과거 사건의 순서를 더 정확하게 기억한다. <span class='ch-hl'>이 관점에서 언어는 현실을 비추는 투명한 창이라기보다는, 오히려 우리가 보는 것을 조용히 굴절시키는 렌즈에 가깝다.</span>",
+    structure: `<div style="background: var(--color-background-info); border-left: 3px solid var(--color-text-info); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 14px;">
+        <div style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-info); letter-spacing: 0.1em; margin-bottom: 4px;">★ 핵심 공식</div>
+        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500;">less <span style="background: #EFF6FC; padding: 1px 5px; border-radius: 2px;">A</span> than <span style="background: #FBF7EE; color: #5A4515; padding: 1px 5px; border-radius: 2px;">B</span></div>
+        <div style="font-size: 12px; color: var(--color-text-info); margin-top: 4px; line-height: 1.5;"><span style="background: #EFF6FC; padding: 0 4px; border-radius: 2px;">A</span>라기 보다는 <span style="background: #FBF7EE; color: #5A4515; padding: 0 4px; border-radius: 2px;">B</span>다</div>
+      </div>
+      <div><span class="ch-hl">Language</span>, <span style="color: #993556;">in this view,</span> <em style="color: var(--color-text-tertiary);">is</em></div>
+      <div style="padding-left: 16px;"><span style="background: #EFF6FC; color: #143C6B; padding: 2px 6px; border-radius: 3px;">less a transparent window onto reality</span> <span style="color: var(--color-text-tertiary); font-size: 11px;">← A</span></div>
       <div style="padding-left: 16px;"><span style="color: var(--color-text-tertiary); font-size: 12px;">— 비교 축 —</span></div>
-      <div style="padding-left: 16px;"><span style="background: #FBF7EE; color: #5A4515; padding: 2px 6px; border-radius: 3px;">than a lens <span style="color: #185FA5;">[that quietly bends what we see]</span></span></div>`,
+      <div style="padding-left: 16px;"><span style="background: #FBF7EE; color: #5A4515; padding: 2px 6px; border-radius: 3px;">than a lens <span style="color: #185FA5;">[that quietly bends what we see]</span></span> <span style="color: var(--color-text-tertiary); font-size: 11px;">← B</span></div>`,
     contextOneLiner: '언어는 현실을 그대로 보여주는 투명한 도구가 아니라, 우리가 세상을 보는 방식을 결정하는 굴절 장치다.',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
@@ -93,12 +100,11 @@ window.SETS = {
     source: '2023학년도 수능 30번 응용',
     background: '18세기 독일 철학자 <strong>칸트(Kant)</strong>는 도덕 판단의 새로운 기준을 제시했어요. "어떤 행위가 옳은지 알고 싶으면, 그 행위가 모두에게 보편 법칙이 될 수 있는지 자문해보라" — 이것이 <strong>정언명령(categorical imperative)</strong>이에요. 결과가 아닌 원칙으로 도덕을 판단하는 이 관점은 현대 윤리학의 토대가 되었습니다.',
     chunks: [
-      { en: 'Kant proposed a moral test', ko: '칸트는 도덕적 시험을 제안했다' },
-      { en: 'whose force still resonates today,', ko: '오늘날에도 여전히 울려 퍼지는,' },
-      { en: 'demanding that we ask', ko: '우리에게 묻기를 요구하면서' },
-      { en: 'whether the rule', ko: '그 규칙이' },
-      { en: 'we are about to follow', ko: '우리가 따르려는' },
-      { en: 'could become a universal law.', ko: '보편적 법칙이 될 수 있는지를.' }
+      { en: 'Kant proposed a moral test', ko: '칸트는 도덕 판단 기준을 제시했다' },
+      { en: 'whose force still resonates today,', ko: '근데 그것(도덕 기준)의 힘은 오늘날에도 여전히 울려 퍼진다.<br><span style="color: var(--color-text-info); font-size: 13px;">→ 그 영향력은 지금까지도 이어지고 있다.</span>' },
+      { en: 'demanding that we ask', ko: '(그 기준은) 우리가 이런 질문을 하도록 요구하면서' },
+      { en: 'whether the rule we are about to follow', ko: '우리가 따르려는 그 규칙이' },
+      { en: 'could become a universal law.', ko: '보편적 법칙이 될 수 있는지 아닌지를' }
     ],
     segments: [
       { text: 'Kant proposed a moral test whose force still resonates today,', pauseAfterMs: 180 },
@@ -108,6 +114,7 @@ window.SETS = {
     koreanFull: '칸트는 오늘날에도 여전히 그 힘이 울려 퍼지는 도덕적 시험을 제안했는데, 그것은 우리가 따르려는 규칙이 보편적 법칙이 될 수 있는지를 자문해야 한다고 요구하는 것이다.',
     passage: "Modern ethics inherits a question that began with eighteenth-century German philosophy. <span class='ch-hl'>Kant proposed a moral test whose force still resonates today, demanding that we ask whether the rule we are about to follow could become a universal law.</span> Lying, for example, fails this test instantly — if everyone lied whenever convenient, the very institution of language would collapse. The brilliance of the principle lies not in its outcomes but in its form: it locates morality in the structure of reasoning itself, rather than in pleasure, custom, or divine command. Even today, debates about justice, consent, and human dignity often return, knowingly or not, to this elegant Kantian frame.",
     passageWordCount: 110,
+    passageKorean: "현대 윤리학은 18세기 독일 철학에서 시작된 하나의 질문을 물려받고 있다. <span class='ch-hl'>칸트는 오늘날에도 여전히 그 힘이 울려 퍼지는 도덕적 시험을 제안했는데, 그것은 우리가 따르려는 규칙이 보편적 법칙이 될 수 있는지를 자문해야 한다고 요구하는 것이다.</span> 예를 들어, 거짓말은 이 시험을 즉시 통과하지 못한다 — 만약 모두가 편리할 때마다 거짓말을 한다면 언어라는 제도 자체가 붕괴할 것이기 때문이다. 이 원리의 탁월함은 결과가 아니라 형식에 있다. 즉, 도덕을 쾌락이나 관습, 신의 명령이 아니라 추론의 구조 그 자체에 위치시킨다는 점이다. 오늘날에도 정의, 동의, 인간 존엄에 관한 논쟁은 알게 모르게 이 우아한 칸트적 틀로 되돌아오곤 한다.",
     structure: `<div><span class="ch-hl">Kant</span> <em style="color: var(--color-text-tertiary);">proposed</em> <span style="border-bottom: 2px solid #0F6E56;">a moral test</span> <span style="color: #993556;">[whose force still resonates today]</span>,</div>
       <div style="padding-left: 12px;"><span style="border-bottom: 2px dashed #993556;">demanding that</span> we ask</div>
       <div style="padding-left: 24px;"><span style="color: #185FA5;">[whether the rule (we are about to follow) could become a universal law]</span>.</div>`,
@@ -150,6 +157,7 @@ window.SETS = {
     koreanFull: '후기 단계에서 발견된 환자들과 비교했을 때 조기에 진단받은 환자들은 90%에 가까운 회복률을 보이는데, 이 수치는 종양학자들이 시간 자체를 평가하는 방식을 바꾸어 놓고 있다.',
     passage: "Three decades ago, an oncologist's prognosis often depended more on the cancer's aggressiveness than on when it was caught. That picture has fundamentally changed. <span class='ch-hl'>Patients diagnosed early, compared with those identified at later stages, show recovery rates approaching ninety percent, a figure transforming how oncologists weigh time itself.</span> Screening programs for breast, colon, and cervical cancer now save tens of thousands of lives each year, not by inventing new drugs but by buying patients earlier appointments with the same drugs. The lesson cuts across medicine: in many serious diseases, the calendar is the most powerful intervention we have.",
     passageWordCount: 102,
+    passageKorean: "30년 전에는, 종양학자의 예후가 종종 암이 언제 발견되었는지보다 그 공격성에 더 좌우되었다. 그 그림은 근본적으로 바뀌었다. <span class='ch-hl'>후기 단계에서 발견된 환자들과 비교했을 때 조기에 진단받은 환자들은 90%에 가까운 회복률을 보이는데, 이 수치는 종양학자들이 시간 자체를 평가하는 방식을 바꾸어 놓고 있다.</span> 유방암, 대장암, 자궁경부암을 위한 검진 프로그램은 이제 매년 수만 명의 생명을 살리고 있는데, 이는 새로운 약을 발명함으로써가 아니라, 같은 약으로 환자들에게 더 이른 진료 기회를 사주는 방식으로 이루어진다. 이 교훈은 의학 전반에 걸쳐 적용된다 — 많은 중대한 질병에서, 달력(시간)이야말로 우리가 가진 가장 강력한 개입 수단이다.",
     structure: `<div><span style="border-bottom: 2px dashed #993556;">Patients diagnosed early</span>, <span style="color: #993556;">[compared with those identified at later stages]</span>,</div>
       <div style="padding-left: 12px;"><em style="color: var(--color-text-tertiary);">show</em> <span style="border-bottom: 2px solid #0F6E56;">recovery rates</span> <span style="color: #185FA5;">[approaching ninety percent]</span>,</div>
       <div style="padding-left: 24px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a figure transforming</span> how oncologists weigh time itself.</div>`,
@@ -192,6 +200,7 @@ window.SETS = {
     koreanFull: '외딴 지역에서 발생한 단 한 곳의 공장 가동 중단이 대륙을 가로질러 바깥으로 파급될 수 있고, 이는 전 세계 제조업체들로 하여금 한때 흔들리지 않을 것 같던 것을 재고하게 만든다.',
     passage: "Globalization once promised efficiency above all else. Components flowed from cheapest source to nearest factory, inventories shrank, profits grew. The pandemic exposed the fragility hidden in this design. <span class='ch-hl'>A single factory shutdown occurring in a remote region can ripple outward across continents, forcing manufacturers worldwide to rethink what once seemed unshakable.</span> Carmakers idled assembly lines because of missing chips; pharmacies emptied of basic supplies; ports backed up for weeks. In response, companies have begun building redundancy back into their networks — multiple suppliers, regional hubs, even reshoring — sacrificing some efficiency for resilience.",
     passageWordCount: 95,
+    passageKorean: "한때 세계화는 무엇보다 효율성을 약속했다. 부품은 가장 값싼 곳에서 가장 가까운 공장으로 흘러갔고, 재고는 줄었으며, 수익은 늘어났다. 그러나 팬데믹은 이 설계 안에 숨어 있던 취약성을 드러냈다. <span class='ch-hl'>외딴 지역에서 발생한 단 한 곳의 공장 가동 중단이 대륙을 가로질러 바깥으로 파급될 수 있고, 이는 전 세계 제조업체들로 하여금 한때 흔들리지 않을 것 같던 것을 재고하게 만든다.</span> 자동차 제조사들은 부족한 반도체 때문에 조립 라인을 세웠고, 약국은 기본 의약품이 바닥났으며, 항구는 수 주 동안 정체되었다. 이에 대응하여 기업들은 자사 네트워크에 다시 중복성을 구축하기 시작했다 — 여러 공급사, 지역 거점, 심지어 본국 회귀까지 — 회복탄력성을 위해 일부 효율성을 희생하면서 말이다.",
     structure: `<div><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">A single factory shutdown</span> <span style="color: #993556;">[occurring in a remote region]</span>,</div>
       <div style="padding-left: 12px;"><em style="color: var(--color-text-tertiary);">can ripple</em> outward across continents,</div>
       <div style="padding-left: 24px;"><span style="border-bottom: 2px dashed #993556;">forcing manufacturers worldwide</span> <span style="color: #185FA5;">[to rethink what once seemed unshakable]</span>.</div>`,
@@ -234,6 +243,7 @@ window.SETS = {
     koreanFull: '만약 종이의 발명이 없었다면 우리가 아는 문명은 결코 나타나지 못했을지도 모르는데, 왜냐하면 그 저렴하고 내구성 있는 매체가 지식으로 하여금 그것을 생산한 정신들보다 더 오래 살아남을 수 있게 해주었기 때문이다.',
     passage: "Around 105 CE, a Chinese court official named Cai Lun perfected a process for making sheets from mulberry bark and rags. The result looked unremarkable, yet it changed everything. <span class='ch-hl'>Were it not for the invention of paper, civilization as we know it might never have emerged, for the cheap, durable medium allowed knowledge to outlive the minds that produced it.</span> Clay tablets were too heavy; papyrus too fragile; parchment too costly. Paper was light, strong enough to fold, and produced from materials abundant nearly everywhere. Within a millennium, it had spread from East Asia through the Islamic world to Europe, where it would eventually meet the printing press and detonate the modern age.",
     passageWordCount: 118,
+    passageKorean: "기원후 105년경, 채륜(蔡倫)이라는 이름의 중국 궁정 관리는 뽕나무 껍질과 헝겊으로 종이 한 장을 만드는 공정을 완성했다. 그 결과물은 평범해 보였지만, 모든 것을 바꾸어 놓았다. <span class='ch-hl'>만약 종이의 발명이 없었다면 우리가 아는 문명은 결코 나타나지 못했을지도 모르는데, 왜냐하면 그 저렴하고 내구성 있는 매체가 지식으로 하여금 그것을 생산한 정신들보다 더 오래 살아남을 수 있게 해주었기 때문이다.</span> 점토판은 너무 무거웠고, 파피루스는 너무 약했으며, 양피지는 너무 비쌌다. 종이는 가볍고, 접을 수 있을 만큼 튼튼했으며, 거의 어디에서나 풍부한 재료로 만들 수 있었다. 천 년이 채 지나기 전에 종이는 동아시아에서 이슬람권을 거쳐 유럽으로 퍼져 나갔고, 그곳에서 결국 인쇄기를 만나 근대를 폭발시키게 된다.",
     structure: `<div><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Were it not for the invention of paper</span>,</div>
       <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">civilization as we know it</span> <em style="color: var(--color-text-tertiary);">might never have emerged</em>,</div>
       <div style="padding-left: 24px;"><span style="color: #993556;">for</span> the cheap, durable medium <em style="color: var(--color-text-tertiary);">allowed</em> <span style="border-bottom: 2px solid #0F6E56;">knowledge</span></div>
@@ -277,6 +287,7 @@ window.SETS = {
     koreanFull: '마지막 페이지가 되어서야 비로소 독자는 말해지지 않은 것이 등장인물들이 소리 내어 말했던 그 어떤 것보다도 훨씬 더 중요했음을 깨닫게 된다.',
     passage: "Hemingway called it the iceberg theory: a story shows only one-eighth of itself, leaving seven-eighths submerged beneath the surface. The greatest writers trust their readers to feel that hidden weight. <span class='ch-hl'>Not until the final page does the reader realize that what was left unsaid mattered far more than anything the characters had spoken aloud.</span> A glance held a moment too long, a sentence trailing into ellipsis, a question never asked — these silences carry meanings too dense for direct speech. To write this way is to honor the reader as a co-creator, granting them the dignity of completing the meaning themselves.",
     passageWordCount: 105,
+    passageKorean: "헤밍웨이는 그것을 빙산 이론이라 불렀다. 즉, 하나의 이야기는 자기 자신의 8분의 1만을 보여주고, 8분의 7은 수면 아래에 잠겨 있도록 둔다는 것이다. 가장 위대한 작가들은 독자들이 그 숨은 무게를 느낄 것이라고 믿는다. <span class='ch-hl'>마지막 페이지가 되어서야 비로소 독자는 말해지지 않은 것이 등장인물들이 소리 내어 말했던 그 어떤 것보다도 훨씬 더 중요했음을 깨닫게 된다.</span> 한순간 너무 오래 머문 시선, 말줄임표로 흩어지는 문장, 끝내 던져지지 않은 질문 — 이러한 침묵들은 직접 말로는 담을 수 없을 만큼 짙은 의미를 품고 있다. 이런 방식으로 글을 쓴다는 것은 독자를 공동 창작자로서 존중하는 일이며, 그들이 스스로 의미를 완성할 수 있는 권위를 부여하는 일이다.",
     structure: `<div><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Not until the final page</span> <em style="color: var(--color-text-tertiary);">does</em> <span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">the reader</span> <em style="color: var(--color-text-tertiary);">realize</em></div>
       <div style="padding-left: 12px;"><span style="color: #185FA5;">[that <span style="background: #EFF6FC; padding: 0 4px;">what was left unsaid</span> mattered far more</span></div>
       <div style="padding-left: 24px;"><span style="color: #185FA5;">than anything <span style="color: #993556;">(that) the characters had spoken aloud]</span>.</span></div>`,
@@ -319,6 +330,7 @@ window.SETS = {
     koreanFull: '우리가 만드는 시스템들이 더 이상 단순한 도구가 아니라 그것의 결정이 거꾸로 우리의 결정을 형성하는 파트너라는 점이 점점 더 분명해졌다.',
     passage: "For most of computing history, machines did exactly what we told them, nothing more. The arrival of large language models has shifted that ground beneath our feet. <span class='ch-hl'>It has become increasingly clear that the systems we build are no longer mere tools but partners whose decisions shape ours in return.</span> A doctor relies on diagnostic suggestions from an algorithm; a writer accepts or resists a model's phrasing; a teenager spends hours conversing with a chatbot that gradually nudges their worldview. The relationship is bidirectional, and that bidirectionality demands a new ethics — one less concerned with what AI can do for us, and more concerned with what we are becoming together.",
     passageWordCount: 117,
+    passageKorean: "컴퓨터 역사의 대부분 동안, 기계는 정확히 우리가 시키는 일을 했고 그 이상은 하지 않았다. 그러나 대규모 언어 모델의 등장은 우리 발밑의 그 지반을 흔들어 놓았다. <span class='ch-hl'>우리가 만드는 시스템들이 더 이상 단순한 도구가 아니라 그것의 결정이 거꾸로 우리의 결정을 형성하는 파트너라는 점이 점점 더 분명해졌다.</span> 한 의사는 알고리즘이 제시하는 진단 제안에 의존하고, 한 작가는 모델이 다듬어 준 표현을 받아들이거나 거부하며, 한 청소년은 자신의 세계관을 서서히 조정해 가는 챗봇과 몇 시간씩 대화한다. 그 관계는 양방향이며, 바로 그 양방향성은 새로운 윤리를 요구한다 — AI가 우리에게 무엇을 해줄 수 있는가에 덜 관심을 두고, 우리가 함께 무엇이 되어가고 있는가에 더 관심을 두는 윤리를.",
     structure: `<div><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">It</span> <em style="color: var(--color-text-tertiary);">has become</em> increasingly clear</div>
       <div style="padding-left: 12px;"><span style="color: #185FA5;">[that the systems <span style="color: #993556;">(we build)</span> are no longer mere tools but partners</span></div>
       <div style="padding-left: 24px;"><span style="color: #185FA5;"><span style="border-bottom: 2px dashed #993556;">whose decisions</span> shape ours in return]</span>.</div>
