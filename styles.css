@@ -1,0 +1,498 @@
+/* ===========================================================
+   디자인 토큰 — Claude.ai 계열의 절제된 학술 톤
+   =========================================================== */
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #F5F4EE;
+  --color-background-tertiary: #FAF9F5;
+  --color-background-info: #E6F1FB;
+  --color-background-success: #ECF5F0;
+  --color-background-danger: #FCEBEB;
+  --color-background-warning: #FAEEDA;
+
+  --color-text-primary: #1A1A19;
+  --color-text-secondary: #5F5E5A;
+  --color-text-tertiary: #888780;
+  --color-text-info: #185FA5;
+  --color-text-success: #0F6E56;
+  --color-text-danger: #993556;
+  --color-text-warning: #854F0B;
+
+  --color-border-tertiary: rgba(0, 0, 0, 0.08);
+  --color-border-secondary: rgba(0, 0, 0, 0.16);
+  --color-border-primary: rgba(0, 0, 0, 0.24);
+  --color-border-info: #185FA5;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+  --font-serif: 'Noto Serif KR', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary: #1F1F1E;
+    --color-background-secondary: #2A2A28;
+    --color-background-tertiary: #181817;
+    --color-background-info: #143656;
+    --color-background-success: #0F3A2E;
+    --color-background-danger: #4A1B28;
+    --color-background-warning: #4A3608;
+
+    --color-text-primary: #F5F4EE;
+    --color-text-secondary: #B4B2A9;
+    --color-text-tertiary: #888780;
+    --color-text-info: #85B7EB;
+    --color-text-success: #5DCAA5;
+    --color-text-danger: #ED93B1;
+    --color-text-warning: #FAC775;
+
+    --color-border-tertiary: rgba(255, 255, 255, 0.1);
+    --color-border-secondary: rgba(255, 255, 255, 0.2);
+    --color-border-primary: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ===========================================================
+   기본 리셋과 타이포
+   =========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background: var(--color-background-tertiary);
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+#app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-bottom: calc(2rem + var(--safe-bottom));
+}
+
+/* ===========================================================
+   설치/업데이트 배너
+   =========================================================== */
+.install-banner,
+.update-banner {
+  position: sticky;
+  top: var(--safe-top);
+  z-index: 100;
+  background: #1F2937;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.install-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.install-banner-text strong {
+  font-weight: 500;
+}
+
+.install-banner-text span {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.install-banner-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.install-btn,
+.update-btn {
+  background: white;
+  color: #1F2937;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.install-dismiss {
+  background: transparent;
+  border: none;
+  color: white;
+  opacity: 0.7;
+  padding: 4px;
+  display: flex;
+}
+
+/* ===========================================================
+   세트 전환 스위처
+   =========================================================== */
+.set-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 4px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+@media (min-width: 600px) {
+  .set-switch {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.set-btn {
+  border: none;
+  background: transparent;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.set-btn:hover { background: var(--color-background-primary); }
+.set-btn.active { background: var(--color-background-primary); }
+.set-btn-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.set-num-badge {
+  font-family: var(--font-serif);
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.1em;
+  background: var(--color-background-secondary);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+.set-btn.active .set-num-badge {
+  background: var(--color-background-info);
+  color: var(--color-text-info);
+}
+.set-grammar {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.set-btn.active .set-grammar { color: var(--color-text-primary); }
+.set-subtitle {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+}
+
+/* ===========================================================
+   네비게이션 탭
+   =========================================================== */
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1rem;
+  padding: 4px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-tabs::-webkit-scrollbar { display: none; }
+
+.nav-tab {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.nav-tab:hover { color: var(--color-text-primary); }
+.nav-tab.active {
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* ===========================================================
+   카드와 박스
+   =========================================================== */
+.screen-card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.meta-line {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+/* ===========================================================
+   청크 학습 — pill, divider, hl
+   =========================================================== */
+.chunk-pill {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 1px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--color-text-primary);
+  border-bottom: 1.5px solid transparent;
+}
+.chunk-pill:hover { background: var(--color-background-secondary); }
+.chunk-pill.active {
+  background: var(--color-background-info);
+  color: var(--color-text-info);
+  border-bottom-color: var(--color-text-info);
+  font-weight: 500;
+}
+.chunk-pill.done { color: var(--color-text-secondary); }
+.chunk-divider { color: var(--color-text-tertiary); font-weight: 300; margin: 0 1px; }
+
+.ch-hl {
+  background: #FAEEDA;
+  color: #5A3D08;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ch-hl {
+    background: #4A3608;
+    color: #FAC775;
+  }
+}
+
+/* ===========================================================
+   모드 탭 (Listen/해석/구문/맥락/Speak)
+   =========================================================== */
+.mode-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
+}
+.mode-tab {
+  border: none;
+  background: transparent;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+.mode-tab.active {
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* ===========================================================
+   5단계 진행 헤더
+   =========================================================== */
+.stage-step {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 10px 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.stage-step.done { background: var(--color-background-secondary); }
+.stage-step.done .stage-num { background: var(--color-text-primary); color: var(--color-background-primary); }
+.stage-step.active { border-color: var(--color-text-info); border-width: 1.5px; background: var(--color-background-info); }
+.stage-step.active .stage-num { background: var(--color-text-info); color: white; }
+.stage-num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 12px; font-weight: 500;
+}
+.stage-label { font-size: 11px; font-weight: 500; }
+.stage-step.active .stage-label { color: var(--color-text-info); }
+
+/* ===========================================================
+   5지선다 선지
+   =========================================================== */
+.choice-card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.choice-card:hover { border-color: var(--color-border-secondary); }
+.choice-card.selected { border-color: var(--color-border-info); background: var(--color-background-info); }
+.choice-card.correct { border-color: #0F6E56; background: var(--color-background-success); }
+.choice-card.incorrect { border-color: #993556; background: var(--color-background-danger); }
+.choice-num {
+  font-family: var(--font-serif); font-size: 16px; font-weight: 500;
+  color: var(--color-text-secondary); flex-shrink: 0; width: 20px;
+}
+.choice-card.correct .choice-num { color: var(--color-text-success); }
+.choice-card.incorrect .choice-num { color: var(--color-text-danger); }
+
+/* ===========================================================
+   버튼
+   =========================================================== */
+.ghost-btn {
+  background: transparent;
+  border: 0.5px solid var(--color-border-tertiary);
+  padding: 5px 12px;
+  font-size: 11px;
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: all 0.15s;
+}
+.ghost-btn:hover {
+  border-color: var(--color-border-secondary);
+  color: var(--color-text-primary);
+}
+
+.primary-btn {
+  background: #1F2937;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  transition: all 0.15s;
+}
+
+.primary-btn:hover { opacity: 0.9; }
+.primary-btn:disabled { opacity: 0.5; }
+
+/* ===========================================================
+   풀 센텐스 플레이어 세그먼트
+   =========================================================== */
+.fp-seg { transition: background 0.2s, color 0.2s; padding: 1px 1px; }
+
+/* ===========================================================
+   로딩 상태
+   =========================================================== */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  color: var(--color-text-tertiary);
+  gap: 12px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-border-tertiary);
+  border-top-color: var(--color-text-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===========================================================
+   하이라이트가 뜨는 어두운 카드 (실전 문제 진입)
+   =========================================================== */
+.dark-cta {
+  background: linear-gradient(135deg, #2D3B4F 0%, #1F2937 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===========================================================
+   모바일 미세 조정
+   =========================================================== */
+@media (max-width: 480px) {
+  #app { padding: 0.75rem; }
+  .screen-card { padding: 1rem 1.25rem; }
+  .nav-tab { padding: 7px 12px; font-size: 11px; }
+  .mode-tab { font-size: 10px; }
+}
+
+/* 클릭 영역을 더 너그럽게 */
+button, a, .chunk-pill, .choice-card, .stage-step, .set-btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* iOS Safari에서 form 요소 스타일 통일 */
+input, button {
+  appearance: none;
+  -webkit-appearance: none;
+}
