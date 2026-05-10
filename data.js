@@ -459,8 +459,8 @@ window.SETS = {
       { en: 'has been observed', ko: '관측되었다 <span style="color: var(--color-text-info); font-size: 13px;">(현재완료 수동: 새로운 발견)</span>' },
       { en: 'just 300 million years', ko: '단 3억 년 후에' },
       { en: 'after the Big Bang,', ko: '빅뱅 이후,' },
-      { en: 'a finding that must be reconciled', ko: '하나의 발견이다, 반드시 조화시켜야 할 <span style="color: var(--color-text-info); font-size: 13px;">(조동사 수동: 마땅히 ~되어야 함)</span>' },
-      { en: 'with our standard model of cosmic evolution.', ko: '우주 진화에 관한 우리의 표준 모형과.' }
+      { en: 'a finding that must be reconciled', ko: '하나의 발견이다, 반드시 조정되어야 할 <span style="color: var(--color-text-info); font-size: 13px;">(조동사 수동: 마땅히 ~되어야 함)</span>' },
+      { en: 'with our standard model of cosmic evolution.', ko: '우주 진화에 관한 (기존의) 우리의 표준 모형과' }
     ],
     segments: [
       { text: 'A galaxy that should not yet exist has been observed', pauseAfterMs: 200 },
@@ -479,7 +479,7 @@ window.SETS = {
       <div><span class="ch-hl">A galaxy</span> <span style="color: #185FA5;">[that should not yet exist]</span></div>
       <div style="padding-left: 12px;"><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">has been observed</span> just 300 million years after the Big Bang,</div>
       <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a finding</span> <span style="color: #185FA5;">[that <span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">must be reconciled</span> with our standard model]</span>.</div>`,
-    contextOneLiner: '제임스 웹 망원경이 *"이론상 존재할 수 없는 은하"*를 관측했고, 이 발견은 기존 우주 진화 모형을 수정하게 만들 것이다.<br>→ has been observed = 사실 보고 / must be reconciled = <strong>이론과의 조정 의무</strong>. 한 문장에서 두 수동태가 사실 → 당위로 흐르는 문장 설계.',
+    contextOneLiner: '초기 우주는 (원소 재료가 부족해서) 천천히 형성되어야 한다는 기존 이론과 달리, 빅뱅 이후 3억년 정도 밖에 안된 너무 이른 시기에 성숙한 은하(무거운 원소가 많고 안정된)가 발견되면서 기존의 우주 진화 모델의 수정이 필요해졌다.',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [

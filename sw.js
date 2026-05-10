@@ -1,5 +1,5 @@
 // 캐시 버전 — 콘텐츠 업데이트 시 이 숫자만 올려주면 학생 폰에 자동 반영
-const CACHE_VERSION = 'v9';
+const CACHE_VERSION = 'v10';
 const CACHE_NAME = `suneung-chunk-${CACHE_VERSION}`;
 
 const CORE_FILES = [
