@@ -1,7 +1,7 @@
 // 학습 세트 데이터 — 새 세트 추가는 이 파일만 수정하면 돼요
 window.SETS = {
   'set1': {
-    grammar: '관계사 수식',
+    grammar: '동격의 that',
     grammarKey: 'relative',
     topic: '진화생물학',
     passageTitle: '집단협력의 진화적 기원',
@@ -93,7 +93,7 @@ window.SETS = {
   },
 
   'set3': {
-    grammar: '관계사 수식',
+    grammar: '소유격 관계대명사 whose',
     grammarKey: 'relative',
     topic: '철학',
     passageTitle: '칸트와 정언명령의 유산',
@@ -135,7 +135,7 @@ window.SETS = {
   },
 
   'set4': {
-    grammar: '분사구문',
+    grammar: '분사 수식구조',
     grammarKey: 'participle',
     topic: '의학',
     passageTitle: '조기 진단의 결정적 효과',
@@ -347,6 +347,152 @@ window.SETS = {
       causalChain: '과거(기계 = 명령 따르는 도구) → 변화(<span class="ch-hl">LLM이 지반 흔듦</span>) → 예시(의사·작가·청소년) → 결론(쌍방향 = 새 윤리 필요)',
       traps: '① 과장(능가 ≠ 동반자) · ② 정반대(글은 결정 능력 인정) · ③ 지엽(의사 의존 비판 아님) · ⑤ 무관(20세기 규제 없음)'
     }
+  },
+
+  'set9': {
+    grammar: '현재완료 수동태 (has been + p.p.)',
+    grammarKey: 'passive',
+    topic: '기후과학',
+    passageTitle: '산업화 이후 지구 기온의 변화',
+    source: '2024학년도 9월 모의평가 응용',
+    background: '<strong>현재완료 수동태(has/have been + p.p.)</strong>는 *"과거 어느 시점부터 지금까지 ~되어 왔다"*라는 시간 폭을 한꺼번에 담는 구조예요. 단순 수동(*was raised*)은 한 시점만, 현재완료 수동(*has been raised*)은 <strong>지속과 누적</strong>을 표현하죠. 기후 데이터처럼 "장기간 누적된 변화"를 말할 때 거의 필수적으로 쓰이는 패턴입니다.',
+    chunks: [
+      { en: "Earth's average surface temperature", ko: '지구의 평균 표면 온도는' },
+      { en: 'has been steadily raised', ko: '꾸준히 상승되어 왔다 <span style="color: var(--color-text-info); font-size: 13px;">(현재완료 수동: 산업화 시점부터 지금까지)</span>' },
+      { en: 'by roughly 1.2 degrees Celsius', ko: '대략 섭씨 1.2도만큼' },
+      { en: 'since industrialization began,', ko: '산업화가 시작된 이래로,' },
+      { en: 'a change driven', ko: '하나의 변화이다, 추동된' },
+      { en: 'almost entirely by human activity.', ko: '거의 전적으로 인간 활동에 의해.' }
+    ],
+    segments: [
+      { text: "Earth's average surface temperature has been steadily raised by roughly 1.2 degrees Celsius", pauseAfterMs: 200 },
+      { text: 'since industrialization began,', pauseAfterMs: 160 },
+      { text: 'a change driven almost entirely by human activity.', pauseAfterMs: 0 }
+    ],
+    koreanFull: '지구의 평균 표면 온도는 산업화가 시작된 이래로 대략 섭씨 1.2도만큼 꾸준히 상승되어 왔는데, 이것은 거의 전적으로 인간 활동에 의해 추동된 변화이다.',
+    passage: "Climate scientists rely on two centuries of meteorological records to track the planet's vital signs. The picture they assemble is unambiguous. <span class='ch-hl'>Earth's average surface temperature has been steadily raised by roughly 1.2 degrees Celsius since industrialization began, a change driven almost entirely by human activity.</span> The same period saw atmospheric carbon dioxide rise from 280 to 420 parts per million, oceans grow measurably more acidic, and Arctic sea ice retreat by nearly half its summer extent. None of these shifts has a plausible natural explanation when considered against the geological baseline.",
+    passageWordCount: 96,
+    passageKorean: "기후 과학자들은 지구의 생체 신호를 추적하기 위해 2세기에 걸친 기상 기록에 의존한다. 그들이 종합한 그림은 분명하다. <span class='ch-hl'>지구의 평균 표면 온도는 산업화가 시작된 이래로 대략 섭씨 1.2도만큼 꾸준히 상승되어 왔는데, 이것은 거의 전적으로 인간 활동에 의해 추동된 변화이다.</span> 같은 기간에 대기 중 이산화탄소는 280ppm에서 420ppm으로 상승했고, 바다는 측정 가능할 정도로 더 산성화되었으며, 북극 해빙은 여름철 면적의 거의 절반만큼 줄어들었다. 지질학적 기준선과 비교했을 때, 이러한 변화들 중 어느 것도 자연적으로는 설명되지 않는다.",
+    structure: `<div style="background: var(--color-background-info); border-left: 3px solid var(--color-text-info); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 14px;">
+        <div style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-info); letter-spacing: 0.1em; margin-bottom: 4px;">★ 핵심 공식</div>
+        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500;">has/have been + p.p. <span style="color: var(--color-text-tertiary);">+ since A</span></div>
+        <div style="font-size: 12px; color: var(--color-text-info); margin-top: 4px; line-height: 1.5;">A 시점부터 지금까지 ~되어 왔다 <strong>(누적·지속)</strong></div>
+      </div>
+      <div><span class="ch-hl">Earth's average surface temperature</span></div>
+      <div style="padding-left: 12px;"><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">has been steadily raised</span> by roughly 1.2°C</div>
+      <div style="padding-left: 24px;"><span style="color: #185FA5;">[since industrialization began]</span>,</div>
+      <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a change</span> <span style="color: #993556;">[driven almost entirely by human activity]</span>.</div>`,
+    contextOneLiner: '산업화 이후 지구 평균 기온은 약 1.2도 상승해 왔고, 이 변화는 거의 전적으로 인간이 만든 결과다.<br>→ 단순한 한 시점의 사건이 아니라 <strong>200년에 걸쳐 누적된 변화</strong> — 그래서 has been raised (현재완료 수동)을 쓴 거예요.',
+    quiz: {
+      question: '다음 글의 주제로 가장 적절한 것은?',
+      choices: [
+        'how meteorological instruments have improved over two centuries',
+        'why the Arctic ice retreat is the most reliable climate indicator',
+        'how cumulative climate data points clearly to human-driven warming',
+        'the geological history of natural temperature fluctuations on Earth',
+        'why carbon dioxide alone cannot explain global temperature changes'
+      ],
+      correct: 2,
+      causalChain: '도구(2세기 기록) → 데이터(<span class="ch-hl">기온 1.2°C 상승</span>) → 누적 증거(CO₂·해양·북극) → 결론(자연 설명 불가)',
+      traps: '① 지엽(도구 발전 글의 초점 아님) · ② 부분 단어(북극은 예시 중 하나) · ④ 무관(자연 변동 설명 없음) · ⑤ 정반대(CO₂가 핵심 증거)'
+    }
+  },
+
+  'set10': {
+    grammar: '과거완료 수동태 + 인과/전후관계',
+    grammarKey: 'passive',
+    topic: '고고학',
+    passageTitle: '고대 유물의 재해석',
+    source: '2023학년도 6월 모의평가 응용',
+    background: '<strong>과거완료 수동태(had been + p.p.)</strong>는 *"과거의 더 과거"*에서 일어난 수동 사건을 표현해요. 글에서 자주 <strong>"한때 X로 여겨졌으나, 이제는 Y로 밝혀졌다"</strong>처럼 <strong>전후관계의 반전</strong>을 만들 때 쓰입니다. 학생들이 시험장에서 이 시제 차이를 놓치면 글의 논리(과거 가설 → 현재 새 발견)가 무너져요.',
+    chunks: [
+      { en: 'The artifact,', ko: '그 유물은,' },
+      { en: 'which had been mistakenly classified', ko: '잘못 분류되어 있었던 <span style="color: var(--color-text-info); font-size: 13px;">(과거완료 수동: 그 전부터 분류된 상태)</span>' },
+      { en: 'as a ceremonial object', ko: '의식용 물건으로' },
+      { en: 'for nearly a century,', ko: '거의 한 세기 동안,' },
+      { en: 'was finally recognized', ko: '마침내 (재)인식되었다 <span style="color: var(--color-text-info); font-size: 13px;">→ 그제서야 알려지게 되었다</span>' },
+      { en: 'as an early astronomical instrument.', ko: '초기의 천문 관측 기구로서.' }
+    ],
+    segments: [
+      { text: 'The artifact, which had been mistakenly classified as a ceremonial object for nearly a century,', pauseAfterMs: 220 },
+      { text: 'was finally recognized', pauseAfterMs: 140 },
+      { text: 'as an early astronomical instrument.', pauseAfterMs: 0 }
+    ],
+    koreanFull: '거의 한 세기 동안 의식용 물건으로 잘못 분류되어 있었던 그 유물은, 마침내 초기의 천문 관측 기구로 인식되게 되었다.',
+    passage: "Museums sometimes get their stories spectacularly wrong. A bronze disc unearthed in the late nineteenth century sat for decades in a glass case labeled, with quiet confidence, as a religious offering. Then a graduate student noticed the patterns of holes drilled around its rim. <span class='ch-hl'>The artifact, which had been mistakenly classified as a ceremonial object for nearly a century, was finally recognized as an early astronomical instrument.</span> The holes corresponded precisely to the angular positions of certain stars at midnight on the spring equinox — too precisely to be coincidence. What had once seemed sacred turned out to be scientific, and the disc now anchors a growing literature on prehistoric astronomy.",
+    passageWordCount: 113,
+    passageKorean: "박물관은 때때로 자기네 설명이 놀라울 만큼 틀려 있기도 한다. 19세기 후반에 발굴된 한 청동 원반은 수십 년 동안 *'종교적 봉헌물'*이라는 라벨이 조용히 자신만만하게 붙은 채 유리장에 놓여 있었다. 그러던 중 한 대학원생이 원반 가장자리에 뚫린 구멍들의 패턴을 발견했다. <span class='ch-hl'>거의 한 세기 동안 의식용 물건으로 잘못 분류되어 있었던 그 유물은, 마침내 초기의 천문 관측 기구로 인식되게 되었다.</span> 그 구멍들은 춘분 자정에 특정 별들이 위치한 각도와 정확히 일치했다 — 우연이라고 보기엔 너무 정확했다. 한때 신성하게 보였던 것이 사실은 과학적이었던 것으로 밝혀졌고, 그 원반은 이제 선사 시대 천문학에 관한 점점 늘어나는 연구 문헌의 중심에 있다.",
+    structure: `<div style="background: var(--color-background-info); border-left: 3px solid var(--color-text-info); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 14px;">
+        <div style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-info); letter-spacing: 0.1em; margin-bottom: 4px;">★ 핵심 공식 — 시간의 두 층</div>
+        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500; line-height: 1.7;">had been + p.p. <span style="color: var(--color-text-tertiary);">[과거의 더 과거]</span><br>was/were + p.p. <span style="color: var(--color-text-tertiary);">[그 다음 과거]</span></div>
+        <div style="font-size: 12px; color: var(--color-text-info); margin-top: 4px; line-height: 1.5;">두 시제가 함께 쓰이면 <strong>"전후관계의 반전"</strong>을 만들어요</div>
+      </div>
+      <div><span class="ch-hl">The artifact</span>,</div>
+      <div style="padding-left: 12px;"><span style="color: #185FA5;">[which <span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">had been mistakenly classified</span> as a ceremonial object for nearly a century]</span>,</div>
+      <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px; font-weight: 500;">was finally recognized</span> as an early astronomical instrument.</div>
+      <div style="margin-top: 8px; font-size: 11px; color: var(--color-text-tertiary);">↑ 100년 동안 잘못 분류 (had been ~) → 마침내 재인식 (was ~) : <strong>시제로 전후관계 표현</strong></div>`,
+    contextOneLiner: '한 청동 원반이 100년간 의식용으로 잘못 분류되어 있다가, 한 대학원생의 발견으로 사실은 천문 관측 기구였음이 밝혀졌다.<br>→ 글의 핵심 = <strong>"과거 가정 vs 새 발견"</strong>의 반전. 시제(had been ↔ was)가 이 논리를 떠받침.',
+    quiz: {
+      question: '다음 글의 주제로 가장 적절한 것은?',
+      choices: [
+        'how a museum reorganized its bronze artifact collection in the nineteenth century',
+        'how careful observation overturned a long-standing misclassification of an ancient object',
+        'why religious offerings often resemble early scientific instruments in shape',
+        'the dominant role of graduate students in modern archaeological breakthroughs',
+        'the difficulty of dating ancient bronze objects using stylistic analysis alone'
+      ],
+      correct: 1,
+      causalChain: '오류(<span class="ch-hl">100년간 의식용으로 분류</span>) → 발견(대학원생이 구멍 패턴 인지) → 검증(춘분 별 위치와 일치) → 재정의(천문 기구)',
+      traps: '① 지엽(박물관 운영 ≠ 재해석) · ③ 무관(다른 사례 일반화 안 함) · ④ 과장(대학원생 일반론 아님) · ⑤ 무관(연대 측정 얘기 없음)'
+    }
+  },
+
+  'set11': {
+    grammar: '조동사 수동태 + 해석 주의',
+    grammarKey: 'passive',
+    topic: '우주공학',
+    passageTitle: '제임스 웹 망원경의 첫 발견',
+    source: '2024학년도 6월 모의평가 응용',
+    background: '<strong>조동사 수동태(must/can/should + be + p.p.)</strong>는 *"~되어야 한다 / ~될 수 있다 / ~되어야 마땅하다"*라는 가능·의무·당위를 담아요. 그리고 학생들이 자주 헷갈리는 게 <strong>be 동사 + 형용사처럼 보이는데 사실 수동태인 경우</strong>예요. *"is concerned"*, *"is involved"* 같은 표현은 형태는 수동태이지만 한국어로는 능동처럼 해석해야 자연스럽죠.',
+    chunks: [
+      { en: 'A galaxy that should not yet exist', ko: '아직 존재하지 말아야 할 은하가' },
+      { en: 'has been observed', ko: '관측되었다 <span style="color: var(--color-text-info); font-size: 13px;">(현재완료 수동: 새로운 발견)</span>' },
+      { en: 'just 300 million years', ko: '단 3억 년 후에' },
+      { en: 'after the Big Bang,', ko: '빅뱅 이후,' },
+      { en: 'a finding that must be reconciled', ko: '하나의 발견이다, 반드시 조화시켜야 할 <span style="color: var(--color-text-info); font-size: 13px;">(조동사 수동: 마땅히 ~되어야 함)</span>' },
+      { en: 'with our standard model of cosmic evolution.', ko: '우주 진화에 관한 우리의 표준 모형과.' }
+    ],
+    segments: [
+      { text: 'A galaxy that should not yet exist has been observed', pauseAfterMs: 200 },
+      { text: 'just 300 million years after the Big Bang,', pauseAfterMs: 180 },
+      { text: 'a finding that must be reconciled with our standard model of cosmic evolution.', pauseAfterMs: 0 }
+    ],
+    koreanFull: '아직 존재하지 말아야 할 은하 하나가 빅뱅 이후 단 3억 년 후에 관측되었는데, 이는 우주 진화에 관한 우리의 표준 모형과 반드시 조화시켜야 할 발견이다.',
+    passage: "For decades, astronomers assumed that the early universe was a slow, fragmentary place — too young, too thin to assemble large structures quickly. The James Webb Space Telescope has begun to challenge that picture in startling ways. <span class='ch-hl'>A galaxy that should not yet exist has been observed just 300 million years after the Big Bang, a finding that must be reconciled with our standard model of cosmic evolution.</span> The object is fully formed, rich in heavy elements, and far brighter than theory predicts. Either galaxies grew up much faster than anyone thought, or our timeline of cosmic history needs serious revision.",
+    passageWordCount: 105,
+    passageKorean: "수십 년 동안 천문학자들은 초기 우주가 느리고 파편적인 곳이라고 — 큰 구조를 빠르게 조립하기에는 너무 어리고 너무 희박한 곳이라고 — 가정해 왔다. 제임스 웹 우주 망원경은 그 그림을 놀라운 방식으로 흔들기 시작했다. <span class='ch-hl'>아직 존재하지 말아야 할 은하 하나가 빅뱅 이후 단 3억 년 후에 관측되었는데, 이는 우주 진화에 관한 우리의 표준 모형과 반드시 조화시켜야 할 발견이다.</span> 그 천체는 완전히 형성되어 있고, 무거운 원소가 풍부하며, 이론이 예측하는 것보다 훨씬 밝다. 은하가 누구의 생각보다도 훨씬 빠르게 성장했거나, 아니면 우주 역사의 시간표가 심각한 수정을 필요로 한다.",
+    structure: `<div style="background: var(--color-background-info); border-left: 3px solid var(--color-text-info); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 14px;">
+        <div style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-info); letter-spacing: 0.1em; margin-bottom: 4px;">★ 핵심 공식 — 두 가지 수동태가 한 문장에</div>
+        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500; line-height: 1.8;">has been + p.p. <span style="color: var(--color-text-tertiary);">→ ~되었다 (사실)</span><br>must be + p.p. <span style="color: var(--color-text-tertiary);">→ ~되어야 한다 (당위)</span></div>
+        <div style="font-size: 12px; color: var(--color-text-info); margin-top: 4px; line-height: 1.5;">한 문장에서 사실(완료 수동) → 당위(조동사 수동)로 자연스럽게 흐름</div>
+      </div>
+      <div><span class="ch-hl">A galaxy</span> <span style="color: #185FA5;">[that should not yet exist]</span></div>
+      <div style="padding-left: 12px;"><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">has been observed</span> just 300 million years after the Big Bang,</div>
+      <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a finding</span> <span style="color: #185FA5;">[that <span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">must be reconciled</span> with our standard model]</span>.</div>`,
+    contextOneLiner: '제임스 웹 망원경이 *"이론상 존재할 수 없는 은하"*를 관측했고, 이 발견은 기존 우주 진화 모형을 수정하게 만들 것이다.<br>→ has been observed = 사실 보고 / must be reconciled = <strong>이론과의 조정 의무</strong>. 한 문장에서 두 수동태가 사실 → 당위로 흐르는 문장 설계.',
+    quiz: {
+      question: '다음 글의 주제로 가장 적절한 것은?',
+      choices: [
+        'how the James Webb Telescope was designed and assembled in space',
+        'why all current galaxies must contain heavy elements to form properly',
+        "the gradual cooling of the universe in its first 300 million years",
+        'an unexpected early galaxy that challenges established theories of cosmic evolution',
+        'the comparative brightness of nearby and distant galaxies in modern astronomy'
+      ],
+      correct: 3,
+      causalChain: '기존 가정(초기 우주 = 느림) → 발견(<span class="ch-hl">존재 불가 은하 관측</span>) → 모순(이론보다 빠른 성장) → 결론(모형 수정 필요)',
+      traps: '① 무관(망원경 설계 ≠ 발견) · ② 과장(모든 은하 일반화 아님) · ③ 정반대(글은 초기 우주가 빠르게 발달했다고 시사) · ⑤ 지엽(밝기 비교는 부분 사례)'
+    }
   }
 };
 
@@ -359,5 +505,5 @@ window.GRAMMAR_CHAPTERS = [
   { key: 'subjunctive', num: 5, name: '가정법', ex: 'Were it not for paper', meta: '8 청크' },
   { key: 'inversion', num: 6, name: '도치 구문', ex: 'Not until the final page', meta: '8 청크' },
   { key: 'dummy', num: 7, name: '가주어 / 가목적어 it', ex: 'It has become clear that', meta: '8 청크' },
-  { key: 'passive', num: 8, name: '수동태', ex: 'minds have been shaped by', meta: '8 청크' }
+  { key: 'passive', num: 8, name: '능동태 vs 수동태 (시제별)', ex: 'has been raised since...', meta: '8 청크' }
 ];
