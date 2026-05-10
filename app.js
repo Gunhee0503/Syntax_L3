@@ -532,7 +532,7 @@ function chunkScreen() {
       ` : ''}
       ${state.mode === 'context' ? `
         <div class="meta-line">CONTEXT</div>
-        <div style="background: var(--color-background-info); border-radius: var(--border-radius-md); padding: 12px 14px; font-size: 14px; line-height: 1.7; color: var(--color-text-info); font-weight: 500; text-align: left; margin-top: 10px;">
+        <div style="background: var(--color-background-info); border-radius: var(--border-radius-md); padding: 14px 16px; font-size: 14px; line-height: 1.85; color: var(--color-text-info); font-weight: 500; text-align: left; margin-top: 10px;">
           ${s.contextOneLiner}
         </div>
       ` : ''}

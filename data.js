@@ -32,14 +32,14 @@ window.SETS = {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         'the role of brain size in determining hunting success among early humans',
-        'how cooperative living shaped the evolution of human social cognition',
         'why human ancestors needed to defend against large predators',
+        'how cooperative living shaped the evolution of human social cognition',
         'the limitations of facial expressions as tools for communication',
         'cultural inheritance as the main driver of cognitive development'
       ],
-      correct: 1,
+      correct: 2,
       causalChain: '환경(혼자선 못 살았다) → 인식(<span class="ch-hl">학습한 문장</span>) → 결과(뇌 변형) → 일반화(사회적 지능 토대)',
-      traps: '① 부분 단어(brain size) · ③ 지엽(포식자) · ④ 정반대(한계) · ⑤ 유사 개념(문화 ≠ 진화)'
+      traps: '① 부분 단어(brain size) · ② 지엽(포식자) · ④ 정반대(한계) · ⑤ 유사 개념(문화 ≠ 진화)'
     }
   },
 
@@ -80,15 +80,15 @@ window.SETS = {
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
-        'the universal structure of human visual perception',
         'how language quietly shapes the way speakers perceive reality',
+        'the universal structure of human visual perception',
         'why grammatical tense systems vary across world languages',
         'the difficulty of translating idioms between distant languages',
         "cognitive scientists' historical bias toward European languages"
       ],
-      correct: 1,
+      correct: 0,
       causalChain: '가정(보편 인식) → 반전(연구 결과) → 메커니즘(어휘가 인식 형성) → 결론(<span class="ch-hl">언어 = 굴절 렌즈</span>)',
-      traps: '① 정반대(글이 부정하는 가정) · ③ 지엽(시제는 예시) · ④ 무관(번역 얘기 없음) · ⑤ 함정(과학자 비판은 부차적)'
+      traps: '② 정반대(글이 부정하는 가정) · ③ 지엽(시제는 예시) · ④ 무관(번역 얘기 없음) · ⑤ 함정(과학자 비판은 부차적)'
     }
   },
 
@@ -123,14 +123,14 @@ window.SETS = {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         "the historical decline of Kant's influence in modern philosophy",
-        'how a Kantian principle continues to shape contemporary moral reasoning',
         'why religious commands provide stronger moral guidance than philosophy',
         'the practical difficulties of applying universal laws in daily life',
-        'the role of pleasure and consequence in eighteenth-century ethics'
+        'the role of pleasure and consequence in eighteenth-century ethics',
+        'how a Kantian principle continues to shape contemporary moral reasoning'
       ],
-      correct: 1,
+      correct: 4,
       causalChain: '제시(칸트의 정언명령) → 예시(거짓말의 자기모순) → 핵심(<span class="ch-hl">형식에 도덕이 있다</span>) → 현대적 의의(정의·존엄 논의)',
-      traps: '① 정반대(영향력 쇠퇴 ≠ 지속) · ③ 무관(종교 비교 없음) · ④ 지엽(어려움 언급 없음) · ⑤ 정반대(쾌락 기반 거부)'
+      traps: '① 정반대(영향력 쇠퇴 ≠ 지속) · ② 무관(종교 비교 없음) · ③ 지엽(어려움 언급 없음) · ④ 정반대(쾌락 기반 거부)'
     }
   },
 
@@ -146,8 +146,8 @@ window.SETS = {
       { en: 'compared with those identified at later stages,', ko: '후기 단계에서 발견된 사람들과 비교했을 때,' },
       { en: 'show recovery rates', ko: '회복률을 보인다' },
       { en: 'approaching ninety percent,', ko: '90%에 가까운,' },
-      { en: 'a figure transforming', ko: '하나의 수치가 바꾸어 놓는다' },
-      { en: 'how oncologists weigh time itself.', ko: '종양학자들이 시간을 평가하는 방식을.' }
+      { en: 'a figure', ko: '(즉) 수치이다' },
+      { en: 'transforming how oncologists weigh time itself.', ko: '종양학자들이 \'시간\'이라는 개념 자체를 평가하는 방식을 바꾸어 놓는' }
     ],
     segments: [
       { text: 'Patients diagnosed early, compared with those identified at later stages,', pauseAfterMs: 200 },
@@ -166,14 +166,14 @@ window.SETS = {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         'why aggressive cancers are increasingly resistant to modern drugs',
-        'how early detection has reshaped cancer treatment outcomes',
         "the high cost barriers preventing widespread cancer screening",
         'recent breakthroughs in chemotherapy for late-stage patients',
+        'how early detection has reshaped cancer treatment outcomes',
         'the ethical debate around mandatory cancer screening programs'
       ],
-      correct: 1,
+      correct: 3,
       causalChain: '과거(공격성 중심 예후) → 현재(<span class="ch-hl">조기 진단 = 회복률 90%</span>) → 메커니즘(시간 매수) → 일반화(시간이 가장 강력한 개입)',
-      traps: '① 무관(공격성 글의 핵심 아님) · ③ 지엽(비용 언급 없음) · ④ 정반대(후기 약 ≠ 조기 진단) · ⑤ 무관(윤리 논쟁 없음)'
+      traps: '① 무관(공격성 글의 핵심 아님) · ② 지엽(비용 언급 없음) · ③ 정반대(후기 약 ≠ 조기 진단) · ⑤ 무관(윤리 논쟁 없음)'
     }
   },
 
@@ -189,8 +189,8 @@ window.SETS = {
       { en: 'occurring in a remote region,', ko: '외딴 지역에서 발생하면,' },
       { en: 'can ripple outward', ko: '바깥으로 파급될 수 있다' },
       { en: 'across continents,', ko: '대륙을 가로질러,' },
-      { en: 'forcing manufacturers worldwide', ko: '전 세계 제조업체들로 하여금' },
-      { en: 'to rethink what once seemed unshakable.', ko: '한때 흔들리지 않을 것 같던 것을 재고하게 만들면서.' }
+      { en: 'forcing manufacturers worldwide to rethink', ko: '전 세계 제조업체들이 재고하게 만들면서' },
+      { en: 'what once seemed unshakable.', ko: '한때 흔들리지 않을 것 같이 보였던 것을<br><span style="color: var(--color-text-info); font-size: 13px;">→ 글로벌 공급망 시스템 (효율 중심 구조)</span>' }
     ],
     segments: [
       { text: 'A single factory shutdown occurring in a remote region,', pauseAfterMs: 180 },
@@ -228,12 +228,12 @@ window.SETS = {
     source: '2024학년도 수능 응용 · 빈칸추론',
     background: '서기 105년경 중국에서 발명된 <strong>종이</strong>는 인류 문명의 가장 결정적인 도구 중 하나예요. 종이가 없었다면 우리는 점토판이나 양피지에 글을 새기고 있을 거고, 책 한 권을 만드는 데 양 200마리가 필요했을 거예요. <strong>지식의 대량 보존과 전파</strong>는 종이가 있었기에 가능한 일이었습니다.',
     chunks: [
-      { en: 'Were it not for the invention of paper,', ko: '만약 종이의 발명이 없었다면,' },
+      { en: 'Were it not for the invention of paper,', ko: '만약 종이의 발명이 없었다면, (현재 가정)' },
       { en: 'civilization as we know it', ko: '우리가 아는 문명은' },
       { en: 'might never have emerged,', ko: '결코 나타나지 못했을지도 모른다,' },
       { en: 'for the cheap, durable medium', ko: '왜냐하면 그 저렴하고 내구성 있는 매체가' },
       { en: 'allowed knowledge', ko: '지식이 ~할 수 있게 해주었기 때문에' },
-      { en: 'to outlive the minds that produced it.', ko: '그것을 생산한 정신들보다 더 오래 살아남을 수 있게.' }
+      { en: 'to outlive the minds that produced it.', ko: '그것을 생산한 정신(=인간)들보다 더 오래 살아남을 수 있게.' }
     ],
     segments: [
       { text: 'Were it not for the invention of paper, civilization as we know it might never have emerged,', pauseAfterMs: 200 },
@@ -248,36 +248,35 @@ window.SETS = {
       <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">civilization as we know it</span> <em style="color: var(--color-text-tertiary);">might never have emerged</em>,</div>
       <div style="padding-left: 24px;"><span style="color: #993556;">for</span> the cheap, durable medium <em style="color: var(--color-text-tertiary);">allowed</em> <span style="border-bottom: 2px solid #0F6E56;">knowledge</span></div>
       <div style="padding-left: 36px;"><span style="color: #185FA5;">[to outlive the minds that produced it]</span>.</div>`,
-    contextOneLiner: '종이가 없었다면 문명이 불가능했을 것이다 — 종이는 지식이 발명자보다 오래 살아남게 해준 매체였기 때문이다.',
+    contextOneLiner: '종이가 발명되지 않았더라면, 우리가 알고 있는 문명은 아마 등장하지 않았을 것이다. 왜냐하면 이 싸고 내구성 있는 매체가 지식을 인간의 기억보다 더 오래 지속되게 만들었기 때문이다.<br>→ 사람은 죽어도 지식은 남는다. 그걸 가능하게 한 게 종이',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         'the technical superiority of clay tablets over early paper',
-        'how the invention of paper made cumulative knowledge possible',
         'why the printing press alone created the modern age',
         'the decline of papyrus as a writing medium in ancient Egypt',
-        'the political role of Cai Lun in the Han dynasty court'
+        'the political role of Cai Lun in the Han dynasty court',
+        'how the invention of paper made cumulative knowledge possible'
       ],
-      correct: 1,
+      correct: 4,
       causalChain: '발명(채륜의 종이) → 가정법(<span class="ch-hl">없었다면 문명 없음</span>) → 메커니즘(지식 ≫ 발명자 수명) → 확산(천 년에 걸친 전파)',
-      traps: '① 정반대(점토판 열등 ≠ 우월) · ③ 과장(인쇄기만 ≠ 종이 + 인쇄기) · ④ 지엽(파피루스 쇠퇴 부차적) · ⑤ 무관(채륜 정치 역할 아님)'
+      traps: '① 정반대(점토판 열등 ≠ 우월) · ② 과장(인쇄기만 ≠ 종이 + 인쇄기) · ③ 지엽(파피루스 쇠퇴 부차적) · ④ 무관(채륜 정치 역할 아님)'
     }
   },
 
   'set7': {
-    grammar: '도치 구문 (부정어 문두)',
+    grammar: '부정어 문두 시 도치',
     grammarKey: 'inversion',
     topic: '문학',
     passageTitle: '침묵이 시작되는 순간',
     source: '2022학년도 수능 40번 응용',
     background: '문학에서 <strong>침묵</strong>은 단순한 부재가 아니에요. 어떤 작가들은 말로 표현할 수 없는 감정을 침묵으로 드러내죠. 헤밍웨이의 <strong>"빙산 이론"</strong> — 글로 쓰는 건 빙산의 8분의 1이고, 나머지는 행간에 잠겨 있다는 것 — 은 이 침묵의 미학을 가장 잘 설명하는 비유예요.',
     chunks: [
-      { en: 'Not until the final page', ko: '마지막 페이지가 되어서야 비로소' },
-      { en: 'does the reader realize', ko: '독자는 깨닫게 된다' },
+      { en: 'Not until the final page', ko: '마지막 페이지가 되기 전까지는 아니다' },
+      { en: 'does the reader realize', ko: '독자가 깨닫게 된다는 것은<br><span style="color: var(--color-text-info); font-size: 13px;">→ 마지막 페이지가 되어서야 독자는 깨닫게 된다</span>' },
       { en: 'that what was left unsaid', ko: '말해지지 않은 것이' },
       { en: 'mattered far more', ko: '훨씬 더 중요했음을' },
-      { en: 'than anything', ko: '그 어떤 것보다도' },
-      { en: 'the characters had spoken aloud.', ko: '등장인물들이 소리 내어 말했던.' }
+      { en: 'than anything the characters had spoken aloud.', ko: '등장 인물들이 소리 내어 말했던 어떤 것 보다도' }
     ],
     segments: [
       { text: 'Not until the final page does the reader realize', pauseAfterMs: 200 },
@@ -291,19 +290,19 @@ window.SETS = {
     structure: `<div><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">Not until the final page</span> <em style="color: var(--color-text-tertiary);">does</em> <span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">the reader</span> <em style="color: var(--color-text-tertiary);">realize</em></div>
       <div style="padding-left: 12px;"><span style="color: #185FA5;">[that <span style="background: #EFF6FC; padding: 0 4px;">what was left unsaid</span> mattered far more</span></div>
       <div style="padding-left: 24px;"><span style="color: #185FA5;">than anything <span style="color: #993556;">(that) the characters had spoken aloud]</span>.</span></div>`,
-    contextOneLiner: '말해지지 않은 것이 말해진 것보다 더 중요하다 — 위대한 문학은 독자를 의미의 공동 창작자로 대우한다.',
+    contextOneLiner: '말해지지 않은 것이, 때로는 말해진 것보다 더 중요하다. 작가들은 모든 것을 직접 드러내지 않고, 드러내지 않은 부분에 더 깊은 의미를 담는다.',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         "Hemingway's preference for plain dialogue over literary description",
-        'how skilled writers use silence and omission as primary tools of meaning',
         'why modern readers struggle with classical literature',
+        'how skilled writers use silence and omission as primary tools of meaning',
         'the historical decline of detailed exposition in twentieth-century novels',
         'translation challenges when rendering implicit meaning across languages'
       ],
-      correct: 1,
+      correct: 2,
       causalChain: '비유(빙산 이론 1/8 vs 7/8) → 신뢰(<span class="ch-hl">독자가 침묵을 느낀다</span>) → 예시(시선·말줄임표·미완 질문) → 가치(독자 = 공동 창작자)',
-      traps: '① 부분 단어(헤밍웨이 단순화 ≠ 침묵의 깊이) · ③ 무관(현대 독자 어려움 없음) · ④ 지엽(20세기 쇠퇴 언급 없음) · ⑤ 무관(번역 얘기 없음)'
+      traps: '① 부분 단어(헤밍웨이 단순화 ≠ 침묵의 깊이) · ② 무관(현대 독자 어려움 없음) · ④ 지엽(20세기 쇠퇴 언급 없음) · ⑤ 무관(번역 얘기 없음)'
     }
   },
 
@@ -340,14 +339,14 @@ window.SETS = {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
         'how artificial intelligence has finally surpassed human intelligence in all tasks',
-        'why our changing relationship with AI requires a new framework of ethics',
         'the technical limitations preventing language models from making decisions',
         'why doctors should never rely on algorithms for medical diagnosis',
+        'why our changing relationship with AI requires a new framework of ethics',
         'historical attempts to regulate computer programs in the twentieth century'
       ],
-      correct: 1,
+      correct: 3,
       causalChain: '과거(기계 = 명령 따르는 도구) → 변화(<span class="ch-hl">LLM이 지반 흔듦</span>) → 예시(의사·작가·청소년) → 결론(쌍방향 = 새 윤리 필요)',
-      traps: '① 과장(능가 ≠ 동반자) · ③ 정반대(글은 결정 능력 인정) · ④ 지엽(의사 의존 비판 아님) · ⑤ 무관(20세기 규제 없음)'
+      traps: '① 과장(능가 ≠ 동반자) · ② 정반대(글은 결정 능력 인정) · ③ 지엽(의사 의존 비판 아님) · ⑤ 무관(20세기 규제 없음)'
     }
   }
 };
