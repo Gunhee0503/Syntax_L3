@@ -318,8 +318,7 @@ window.SETS = {
       { en: 'that the systems we build', ko: '우리가 만드는 시스템들이' },
       { en: 'are no longer mere tools', ko: '더 이상 단순한 도구가 아니라' },
       { en: 'but partners', ko: '오히려 파트너라는 점이' },
-      { en: 'whose decisions', ko: '그것의 결정들이' },
-      { en: 'shape ours in return.', ko: '거꾸로 우리의 결정을 형성한다.' }
+      { en: 'whose decisions shape ours in return.', ko: '그것(AI 시스템)의 결정들이 우리의 결정을 다시 형성한다.' }
     ],
     segments: [
       { text: 'It has become increasingly clear', pauseAfterMs: 160 },
@@ -334,7 +333,7 @@ window.SETS = {
       <div style="padding-left: 12px;"><span style="color: #185FA5;">[that the systems <span style="color: #993556;">(we build)</span> are no longer mere tools but partners</span></div>
       <div style="padding-left: 24px;"><span style="color: #185FA5;"><span style="border-bottom: 2px dashed #993556;">whose decisions</span> shape ours in return]</span>.</div>
       <div style="padding-left: 12px; font-size: 12px; color: var(--color-text-tertiary); margin-top: 4px;">↑ It은 가주어, [that ~] 절 전체가 진주어</div>`,
-    contextOneLiner: 'AI는 더 이상 도구가 아니라 우리에게 영향을 주는 파트너이며, 따라서 새로운 윤리가 필요하다.',
+    contextOneLiner: '우리가 만든 시스템(AI)은 더 이상 단순한 도구가 아니라, 그들의 결정이 우리의 결정에도 영향을 미치는 ‘파트너’가 되었다는 것이 점점 분명해지고 있다.',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
