@@ -136,7 +136,7 @@ window.SETS = {
 
   'set4': {
     grammar: '분사 수식구조',
-    grammarKey: 'participle',
+    grammarKey: 'participle_modifier',
     topic: '의학',
     passageTitle: '조기 진단의 결정적 효과',
     source: '2024학년도 6월 모의평가 응용',
@@ -352,49 +352,49 @@ window.SETS = {
   'set9': {
     grammar: '현재완료 수동태 (has been + p.p.)',
     grammarKey: 'passive',
-    topic: '기후과학',
-    passageTitle: '산업화 이후 지구 기온의 변화',
+    topic: '의학사',
+    passageTitle: '항생제가 바꿔놓은 의학의 풍경',
     source: '2024학년도 9월 모의평가 응용',
-    background: '<strong>현재완료 수동태(has/have been + p.p.)</strong>는 *"과거 어느 시점부터 지금까지 ~되어 왔다"*라는 시간 폭을 한꺼번에 담는 구조예요. 단순 수동(*was raised*)은 한 시점만, 현재완료 수동(*has been raised*)은 <strong>지속과 누적</strong>을 표현하죠. 기후 데이터처럼 "장기간 누적된 변화"를 말할 때 거의 필수적으로 쓰이는 패턴입니다.',
+    background: '<strong>현재완료 수동태(has/have been + p.p.)</strong>는 *"과거 어느 시점부터 지금까지 ~되어 왔다"*라는 시간 폭을 한꺼번에 담는 구조예요. 단순 수동(*was saved*)은 한 시점만, 현재완료 수동(*has been saved*)은 <strong>지속과 누적</strong>을 표현하죠. 의학사처럼 "한 발견 이후 누적된 효과"를 말할 때 거의 필수적으로 쓰이는 패턴입니다.',
     chunks: [
-      { en: "Earth's average surface temperature", ko: '지구의 평균 표면 온도는' },
-      { en: 'has been steadily raised', ko: '꾸준히 상승되어 왔다 <span style="color: var(--color-text-info); font-size: 13px;">(현재완료 수동: 산업화 시점부터 지금까지)</span>' },
-      { en: 'by roughly 1.2 degrees Celsius', ko: '대략 섭씨 1.2도만큼' },
-      { en: 'since industrialization began,', ko: '산업화가 시작된 이래로,' },
-      { en: 'a change driven', ko: '하나의 변화이다, 추동된' },
-      { en: 'almost entirely by human activity.', ko: '거의 전적으로 인간 활동에 의해.' }
+      { en: 'Countless lives', ko: '수많은 생명들이' },
+      { en: 'have been saved', ko: '구해져 왔다 <span style="color: var(--color-text-info); font-size: 13px;">(현재완료 수동: 1928년 이후 지금까지 누적)</span>' },
+      { en: 'by antibiotics', ko: '항생제에 의해' },
+      { en: "since Fleming's accidental discovery in 1928,", ko: '1928년 플레밍의 우연한 발견 이래로,' },
+      { en: 'a single class of drugs', ko: '하나의 약 군(群)이다' },
+      { en: 'that has reshaped modern medicine more than any other.', ko: '다른 어떤 것보다도 현대 의학을 더 많이 재편한.' }
     ],
     segments: [
-      { text: "Earth's average surface temperature has been steadily raised by roughly 1.2 degrees Celsius", pauseAfterMs: 200 },
-      { text: 'since industrialization began,', pauseAfterMs: 160 },
-      { text: 'a change driven almost entirely by human activity.', pauseAfterMs: 0 }
+      { text: 'Countless lives have been saved by antibiotics', pauseAfterMs: 180 },
+      { text: "since Fleming's accidental discovery in 1928,", pauseAfterMs: 200 },
+      { text: 'a single class of drugs that has reshaped modern medicine more than any other.', pauseAfterMs: 0 }
     ],
-    koreanFull: '지구의 평균 표면 온도는 산업화가 시작된 이래로 대략 섭씨 1.2도만큼 꾸준히 상승되어 왔는데, 이것은 거의 전적으로 인간 활동에 의해 추동된 변화이다.',
-    passage: "Climate scientists rely on two centuries of meteorological records to track the planet's vital signs. The picture they assemble is unambiguous. <span class='ch-hl'>Earth's average surface temperature has been steadily raised by roughly 1.2 degrees Celsius since industrialization began, a change driven almost entirely by human activity.</span> The same period saw atmospheric carbon dioxide rise from 280 to 420 parts per million, oceans grow measurably more acidic, and Arctic sea ice retreat by nearly half its summer extent. None of these shifts has a plausible natural explanation when considered against the geological baseline.",
-    passageWordCount: 96,
-    passageKorean: "기후 과학자들은 지구의 생체 신호를 추적하기 위해 2세기에 걸친 기상 기록에 의존한다. 그들이 종합한 그림은 분명하다. <span class='ch-hl'>지구의 평균 표면 온도는 산업화가 시작된 이래로 대략 섭씨 1.2도만큼 꾸준히 상승되어 왔는데, 이것은 거의 전적으로 인간 활동에 의해 추동된 변화이다.</span> 같은 기간에 대기 중 이산화탄소는 280ppm에서 420ppm으로 상승했고, 바다는 측정 가능할 정도로 더 산성화되었으며, 북극 해빙은 여름철 면적의 거의 절반만큼 줄어들었다. 지질학적 기준선과 비교했을 때, 이러한 변화들 중 어느 것도 자연적으로는 설명되지 않는다.",
+    koreanFull: '1928년 플레밍의 우연한 발견 이래로 항생제에 의해 수많은 생명들이 구해져 왔는데, 이것은 다른 어떤 것보다도 현대 의학을 더 많이 재편한 단 하나의 약 군(群)이다.',
+    passage: "Before the twentieth century, a simple cut or a routine childbirth could turn lethal within days. Bacterial infections were among the leading causes of death across every age and class. <span class='ch-hl'>Countless lives have been saved by antibiotics since Fleming's accidental discovery in 1928, a single class of drugs that has reshaped modern medicine more than any other.</span> Surgical procedures once considered too risky became routine; childhood mortality plummeted; tuberculosis sanatoriums emptied within a generation. The catch is that bacteria evolve faster than chemists can innovate, and the antibiotic era now confronts the very resistance it inadvertently created.",
+    passageWordCount: 100,
+    passageKorean: "20세기 이전에는 작은 베인 상처나 평범한 출산조차 며칠 안에 치명적인 일이 될 수 있었다. 세균 감염은 모든 연령과 계층에 걸쳐 가장 큰 사망 원인 중 하나였다. <span class='ch-hl'>1928년 플레밍의 우연한 발견 이래로 항생제에 의해 수많은 생명들이 구해져 왔는데, 이것은 다른 어떤 것보다도 현대 의학을 더 많이 재편한 단 하나의 약 군(群)이다.</span> 한때 너무 위험하다고 여겨졌던 외과 수술이 일상이 되었고, 어린이 사망률은 급격히 떨어졌으며, 결핵 요양원은 한 세대 만에 비워졌다. 다만 문제는 세균이 화학자들이 혁신할 수 있는 속도보다 더 빠르게 진화한다는 것이고, 항생제 시대는 이제 자기도 모르게 만들어 낸 바로 그 내성과 마주하고 있다.",
     structure: `<div style="background: var(--color-background-info); border-left: 3px solid var(--color-text-info); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 14px;">
         <div style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-info); letter-spacing: 0.1em; margin-bottom: 4px;">★ 핵심 공식</div>
-        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500;">has/have been + p.p. <span style="color: var(--color-text-tertiary);">+ since A</span></div>
+        <div style="font-family: var(--font-mono); font-size: 13px; color: var(--color-text-info); font-weight: 500;">have/has been + p.p. <span style="color: var(--color-text-tertiary);">+ since A</span></div>
         <div style="font-size: 12px; color: var(--color-text-info); margin-top: 4px; line-height: 1.5;">A 시점부터 지금까지 ~되어 왔다 <strong>(누적·지속)</strong></div>
       </div>
-      <div><span class="ch-hl">Earth's average surface temperature</span></div>
-      <div style="padding-left: 12px;"><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">has been steadily raised</span> by roughly 1.2°C</div>
-      <div style="padding-left: 24px;"><span style="color: #185FA5;">[since industrialization began]</span>,</div>
-      <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a change</span> <span style="color: #993556;">[driven almost entirely by human activity]</span>.</div>`,
-    contextOneLiner: '산업화 이후 지구 평균 기온은 약 1.2도 상승해 왔고, 이 변화는 거의 전적으로 인간이 만든 결과다.<br>→ 단순한 한 시점의 사건이 아니라 <strong>200년에 걸쳐 누적된 변화</strong> — 그래서 has been raised (현재완료 수동)을 쓴 거예요.',
+      <div><span class="ch-hl">Countless lives</span></div>
+      <div style="padding-left: 12px;"><span style="background: #FCEBEB; color: #791F1F; padding: 2px 6px; border-radius: 3px; font-weight: 500;">have been saved</span> <span style="color: #993556;">by antibiotics</span></div>
+      <div style="padding-left: 24px;"><span style="color: #185FA5;">[since Fleming's accidental discovery in 1928]</span>,</div>
+      <div style="padding-left: 12px;"><span style="background: #FAEEDA; color: #854F0B; padding: 2px 6px; border-radius: 3px;">a single class of drugs</span> <span style="color: #185FA5;">[that has reshaped modern medicine more than any other]</span>.</div>`,
+    contextOneLiner: '1928년 페니실린 발견 이후 항생제는 수많은 생명을 구하며 현대 의학의 풍경 자체를 바꿔놓았다.<br>→ 한 시점의 발견(1928)과 지금까지의 누적 효과를 한꺼번에 담아야 해서 <strong>have been saved (현재완료 수동)</strong>을 쓴 거예요.',
     quiz: {
       question: '다음 글의 주제로 가장 적절한 것은?',
       choices: [
-        'how meteorological instruments have improved over two centuries',
-        'why the Arctic ice retreat is the most reliable climate indicator',
-        'how cumulative climate data points clearly to human-driven warming',
-        'the geological history of natural temperature fluctuations on Earth',
-        'why carbon dioxide alone cannot explain global temperature changes'
+        'how the discovery of antibiotics transformed modern medicine despite an emerging crisis',
+        'the chemical structure differences between various classes of antibiotics',
+        "why Fleming's experimental methods were criticized by his contemporaries",
+        'the rise of tuberculosis sanatoriums in early twentieth-century Europe',
+        'a comparison of bacterial and viral infection treatment strategies'
       ],
-      correct: 2,
-      causalChain: '도구(2세기 기록) → 데이터(<span class="ch-hl">기온 1.2°C 상승</span>) → 누적 증거(CO₂·해양·북극) → 결론(자연 설명 불가)',
-      traps: '① 지엽(도구 발전 글의 초점 아님) · ② 부분 단어(북극은 예시 중 하나) · ④ 무관(자연 변동 설명 없음) · ⑤ 정반대(CO₂가 핵심 증거)'
+      correct: 0,
+      causalChain: '과거(<span class="ch-hl">감염이 주요 사망 원인</span>) → 발견(1928 플레밍) → 효과(수술·아동 사망률·결핵) → 현재 도전(내성)',
+      traps: '② 무관(약 종류 비교 없음) · ③ 무관(플레밍 비판 없음) · ④ 지엽(결핵은 효과 예시 중 하나) · ⑤ 무관(세균 vs 바이러스 비교 없음)'
     }
   },
 
@@ -498,12 +498,94 @@ window.SETS = {
 
 // 문법 챕터 정의 — 각 세트가 어느 챕터에 속하는지 자동 매칭
 window.GRAMMAR_CHAPTERS = [
-  { key: 'participle', num: 1, name: '분사구문', ex: 'favoring those who could...', meta: '8 청크' },
-  { key: 'relative', num: 2, name: '관계사 수식', ex: 'who could anticipate', meta: '8 청크' },
-  { key: 'apposition', num: 3, name: '동격 that', ex: 'recognition that survival...', meta: '8 청크' },
-  { key: 'comparative', num: 4, name: '비교급 / 최상급', ex: 'less a window than a lens', meta: '8 청크' },
-  { key: 'subjunctive', num: 5, name: '가정법', ex: 'Were it not for paper', meta: '8 청크' },
-  { key: 'inversion', num: 6, name: '도치 구문', ex: 'Not until the final page', meta: '8 청크' },
-  { key: 'dummy', num: 7, name: '가주어 / 가목적어 it', ex: 'It has become clear that', meta: '8 청크' },
-  { key: 'passive', num: 8, name: '능동태 vs 수동태 (시제별)', ex: 'has been raised since...', meta: '8 청크' }
+  {
+    key: 'participle_modifier',
+    num: 1,
+    name: '현재분사, 과거분사 수식 구조',
+    ex: 'Patients diagnosed early...',
+    meta: '8 청크'
+  },
+  {
+    key: 'passive',
+    num: 2,
+    name: '능동태 vs 수동태',
+    ex: 'have been saved since...',
+    meta: '8 청크',
+    subCategories: [
+      {
+        title: '시제별 수동태',
+        desc: '현재완료 / 과거완료 / 단순 시제 등 시제 차이가 의미를 결정',
+        examples: 'has been saved · had been classified · was reconciled'
+      },
+      {
+        title: '인과관계 / 선후관계',
+        desc: '글의 논리 흐름을 만드는 수동 표현',
+        examples: 'be brought about · be accounted for · be attributed to · be ascribed to · be followed by · be accompanied by · be preceded by · be survived by'
+      },
+      {
+        title: '기타 해석에 주의해야 할 수동표현',
+        desc: '직역으로 풀면 어색해서 한국어 어감으로 다듬어야 할 수동',
+        examples: 'be overcome with · be outdone by · be overshadowed by · be credited with · be outnumbered by · be bereaved of · be estimated'
+      }
+    ]
+  },
+  {
+    key: 'participle',
+    num: 3,
+    name: '분사구문',
+    ex: 'forcing manufacturers to rethink...',
+    meta: '8 청크'
+  },
+  {
+    key: 'relative',
+    num: 4,
+    name: '관계사',
+    ex: 'a moral test whose force...',
+    meta: '8 청크',
+    subCategories: [
+      {
+        title: '관계대명사 which, who(m), what, 접속사 that',
+        desc: '주격·목적격·계속적 용법 등 가장 빈출하는 관계사',
+        examples: 'who could anticipate · which scientists could not explain · what we see'
+      },
+      {
+        title: '소유격 관계대명사 whose',
+        desc: '선행사의 소유 관계를 나타내는 관계사',
+        examples: 'a philosopher whose ideas reshaped ethics'
+      },
+      {
+        title: '동격의 that',
+        desc: '명사 = 절. 관계사가 아니라 절이 명사를 풀어 설명',
+        examples: 'the recognition that survival depended on...'
+      }
+    ]
+  },
+  {
+    key: 'subjunctive',
+    num: 5,
+    name: '가정법',
+    ex: 'Were it not for paper...',
+    meta: '8 청크'
+  },
+  {
+    key: 'comparative',
+    num: 6,
+    name: '비교급',
+    ex: 'less a window than a lens',
+    meta: '8 청크'
+  },
+  {
+    key: 'inversion',
+    num: 7,
+    name: '도치구문',
+    ex: 'Not until the final page does...',
+    meta: '8 청크'
+  },
+  {
+    key: 'dummy',
+    num: 8,
+    name: '가주어, 가목적어 it',
+    ex: 'It has become clear that...',
+    meta: '8 청크'
+  }
 ];

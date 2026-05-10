@@ -321,7 +321,7 @@ function homeScreen() {
     </div>
 
     <div class="meta-line">두 가지 학습 진입 경로</div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 1.5rem;">
       <div onclick="nav('preview')" style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; cursor: pointer;">
         <i class="ti ti-book" style="font-size: 24px; color: var(--color-text-tertiary); margin-bottom: 8px;" aria-hidden="true"></i>
         <div style="font-size: 14px; font-weight: 500; margin-bottom: 4px;">지문별 학습</div>
@@ -332,6 +332,24 @@ function homeScreen() {
         <div style="font-size: 14px; font-weight: 500; margin-bottom: 4px;">문법별 학습</div>
         <div style="font-size: 12px; color: var(--color-text-secondary); line-height: 1.5;">같은 패턴 청크 모아 집중 학습.</div>
       </div>
+    </div>
+
+    <div class="meta-line">문법 라이브러리 · CORE 8</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+      ${GRAMMAR_CHAPTERS.map(c => {
+        const setsCount = Object.values(SETS).filter(set => set.grammarKey === c.key).length;
+        const completedCount = Object.entries(SETS).filter(([id, set]) => set.grammarKey === c.key && state.completedStages[id]?.includes('quiz')).length;
+        const hasContent = setsCount > 0;
+        return `
+          <div onclick="nav('grammar')" style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <span style="font-family: var(--font-serif); font-size: 9px; color: var(--color-text-tertiary); letter-spacing: 0.1em;">CORE ${c.num}</span>
+              ${hasContent ? `<span style="margin-left: auto; font-size: 9px; background: var(--color-background-info); color: var(--color-text-info); padding: 1px 5px; border-radius: 999px; font-weight: 500;">${completedCount}/${setsCount}</span>` : ''}
+            </div>
+            <div style="font-size: 12px; font-weight: 500; line-height: 1.35; color: ${hasContent ? 'var(--color-text-primary)' : 'var(--color-text-tertiary)'};">${c.name}</div>
+          </div>
+        `;
+      }).join('')}
     </div>
   `;
 }
@@ -353,12 +371,11 @@ function grammarLibScreen() {
   return `
     ${navTabs()}
     <div style="margin-bottom: 1.25rem;">
-      <div class="meta-line">GRAMMAR LIBRARY</div>
-      <h1 style="font-size: 22px; font-weight: 500; margin: 4px 0 6px;">문법 구조로 청크 모아 학습</h1>
-      <div style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">한 챕터 안에 같은 문법 패턴이 들어간 다양한 소재의 세트가 누적돼요.</div>
+      <div class="meta-line">GRAMMAR LIBRARY · CORE 8</div>
+      <h1 style="font-size: 22px; font-weight: 500; margin: 4px 0 6px;">8개 핵심 챕터로 구성</h1>
+      <div style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">한 챕터 안에 같은 문법 우산 아래의 다양한 세부 패턴이 누적돼요.</div>
     </div>
-    <div class="meta-line">CORE 8</div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+    <div style="display: grid; gap: 10px;">
       ${chaptersWithStats.map(c => {
         const clickable = c.setsInChapter.length > 0;
         const onclick = clickable
@@ -367,21 +384,41 @@ function grammarLibScreen() {
         const meta = c.setsInChapter.length > 0
           ? `${c.setsInChapter.length}/8`
           : c.meta;
-        const statusClass = c.status === 'done' ? 'background: var(--color-text-primary); color: var(--color-background-primary);'
+        const numBg = c.status === 'done' ? 'background: var(--color-text-primary); color: var(--color-background-primary);'
           : c.status === 'active' ? 'background: var(--color-text-info); color: white;'
           : 'background: var(--color-background-secondary); color: var(--color-text-secondary);';
-        const badgeClass = c.status === 'done' ? 'background: var(--color-background-success); color: var(--color-text-success);'
+        const badgeStyle = c.status === 'done' ? 'background: var(--color-background-success); color: var(--color-text-success);'
           : c.status === 'active' ? 'background: var(--color-background-info); color: var(--color-text-info); font-weight: 500;'
           : 'background: var(--color-background-secondary); color: var(--color-text-tertiary);';
+
+        const subCatHTML = c.subCategories ? `
+          <div style="margin-top: 10px; padding-top: 10px; border-top: 0.5px solid var(--color-border-tertiary); display: grid; gap: 8px;">
+            ${c.subCategories.map((sc, i) => `
+              <div style="background: var(--color-background-secondary); border-radius: 6px; padding: 8px 10px;">
+                <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 3px;">
+                  <span style="font-family: var(--font-serif); font-size: 10px; color: var(--color-text-tertiary);">${i + 1}.</span>
+                  <span style="font-size: 12px; font-weight: 500; color: var(--color-text-primary);">${sc.title}</span>
+                </div>
+                <div style="font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 4px;">${sc.desc}</div>
+                <div style="font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); line-height: 1.5; word-break: break-word;">${sc.examples}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : '';
+
         return `
           <div onclick="${onclick}"
-            style="background: var(--color-background-primary); border: 0.5px solid ${c.isActive ? 'var(--color-text-info)' : 'var(--color-border-tertiary)'}; border-radius: var(--border-radius-md); padding: 12px 14px; cursor: pointer;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
-              <div style="width: 24px; height: 24px; border-radius: 50%; ${statusClass} display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 12px; font-weight: 500; flex-shrink: 0;">${c.num}</div>
-              <div style="font-size: 13px; font-weight: 500; flex: 1;">${c.name}</div>
-              <span style="font-size: 10px; ${badgeClass} padding: 2px 6px; border-radius: 999px;">${meta}</span>
+            style="background: var(--color-background-primary); border: 0.5px solid ${c.isActive ? 'var(--color-text-info)' : 'var(--color-border-tertiary)'}; border-radius: var(--border-radius-md); padding: 14px 16px; cursor: pointer;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+              <span style="font-family: var(--font-serif); font-size: 9px; color: var(--color-text-tertiary); letter-spacing: 0.1em;">CORE ${c.num}</span>
+              <span style="margin-left: auto; font-size: 10px; ${badgeStyle} padding: 2px 6px; border-radius: 999px;">${meta}</span>
             </div>
-            <div style="font-family: var(--font-serif); font-size: 11px; color: var(--color-text-secondary); font-style: italic; line-height: 1.5;">"${c.ex}"</div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; ${numBg} display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 13px; font-weight: 500; flex-shrink: 0;">${c.num}</div>
+              <div style="font-size: 14px; font-weight: 500; flex: 1;">${c.name}</div>
+            </div>
+            <div style="font-family: var(--font-serif); font-size: 11px; color: var(--color-text-secondary); font-style: italic; line-height: 1.5; margin-top: 6px;">"${c.ex}"</div>
+            ${subCatHTML}
           </div>
         `;
       }).join('')}
